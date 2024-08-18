@@ -1,0 +1,80 @@
+#about {
+  background-color: #1a1a1a; /* Dark background for contrast */
+  padding: 40px 20px;
+  color: #f0f0f0; /* Light text for readability */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left; /* Keep text aligned left */
+}
+
+.about-content {
+  max-width: 55%; /* Adjust content width */
+  margin-left: 20px; /* Space between the image and text */
+}
+
+.about-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.about-content strong {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.about-image {
+  max-width: 320px; /* Fixed small box size */
+  max-height: 320px;
+  flex-shrink: 0; /* Prevents the image from resizing */
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(250, 248, 248, 0.8); /* Shadow edge effect */
+  object-fit: cover; /* Ensures the image fits perfectly in the square */
+}
+
+/* Typing text animation */
+.typing-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bcd4; /* Typing text color */
+  display: inline-block;
+  border-right: .15em solid #00bcd4;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 5s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00bcd4; }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    flex-direction: column;
+    text-align: center; /* Center text for small screens */
+  }
+
+  .about-content {
+    max-width: 100%;
+    margin: 20px 0; /* Space above and below content */
+  }
+
+  .about-image {
+    max-width: 150px;
+    max-height: 150px; /* Adjust for smaller screens */
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+/* Footer.css */
+#footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #00bcd4; /* Accent border */
+    margin-top: 40px;
+  }
+  
+  #footer p {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: #00bcd4; /* Accent color */
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ffffff; /* Change color on hover */
+  }
+  
+  .social-links a i {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  

@@ -1,0 +1,69 @@
+/* src/components/Skills.css */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f3eeee; /* Box background color */
+  border-radius: 10px;
+  width: 120px; /* Fixed box size */
+  height: 120px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.skill-logo {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px;
+  transition: opacity 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-5px); /* Subtle hover lift effect */
+}
+
+.skill-name {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.skills-list li:hover .skill-name {
+  opacity: 1; /* Show skill name on hover */
+}
+
+/* Fade-in animations with delays */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+.delay1 { animation-delay: 0.5s; }
+.delay2 { animation-delay: 1s; }
+.delay3 { animation-delay: 1.5s; }
+.delay4 { animation-delay: 2s; }
+.delay5 { animation-delay: 2.5s; }
+.delay6 { animation-delay: 3s; }
+.delay7 { animation-delay: 3.5s; }
+.delay8 { animation-delay: 4s; }
+.delay9 { animation-delay: 4.5s; }
