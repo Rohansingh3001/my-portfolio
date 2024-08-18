@@ -26,8 +26,7 @@ const Projects = () => (
         <h3 className="project-title">Comming Soon</h3>
         <p className="project-description"></p>
         <div className="project-links">
-          <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+         
         </div>
       </li>
     </ul>
