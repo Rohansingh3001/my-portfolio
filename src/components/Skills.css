@@ -1,4 +1,3 @@
-/* src/components/Skills.css */
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +53,7 @@
 
 @keyframes fadeIn {
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -67,3 +66,45 @@
 .delay7 { animation-delay: 3.5s; }
 .delay8 { animation-delay: 4s; }
 .delay9 { animation-delay: 4.5s; }
+
+/* Responsive styles for mobile view */
+@media screen and (max-width: 768px) {
+  .skills-list {
+    justify-content: flex-start; /* Align items to the left */
+    padding: 0 10px; /* Reduce padding */
+  }
+
+  .skills-list li {
+    margin: 10px;
+    width: calc(33.33% - 20px); /* 3 items per row */
+    height: 100px; /* Adjust box height for smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .skill-logo {
+    width: 40px;
+    height: 40px; /* Adjust logo size */
+    margin-bottom: 8px;
+  }
+
+  .skill-name {
+    font-size: 12px; /* Smaller font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-list li {
+    margin: 10px;
+    width: calc(50% - 20px); /* 2 items per row for very small screens */
+    height: 90px;
+  }
+
+  .skill-logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skill-name {
+    font-size: 11px;
+  }
+}
