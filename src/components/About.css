@@ -1,16 +1,16 @@
 #about {
-  background-color: #1a1a1a; /* Dark background for contrast */
+  background-color: #1a1a1a;
   padding: 40px 20px;
-  color: #f0f0f0; /* Light text for readability */
+  color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left; /* Keep text aligned left */
+  text-align: left;
 }
 
 .about-content {
   max-width: 55%; /* Adjust content width */
-  margin-left: 20px; /* Space between the image and text */
+  margin-right: 20px; /* Space between the image and text */
 }
 
 .about-content h2 {
@@ -23,58 +23,50 @@
   font-size: 18px;
   line-height: 1.6;
   color: #cccccc;
+  margin-bottom: 15px;
 }
 
-.about-content strong {
-  font-size: 20px;
-  color: #ffffff;
+/* Typing text style */
+.typing-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00bcd4; /* Typing text color */
+  white-space: nowrap; /* Prevents text wrapping */
+  overflow: hidden;
+  border-right: 2px solid #00bcd4; /* Cursor effect */
+  height: 24px; /* Fixed height to prevent content shift */
 }
 
+/* Adjust spacing for the image */
 .about-image {
-  max-width: 320px; /* Fixed small box size */
-  max-height: 320px;
-  flex-shrink: 0; /* Prevents the image from resizing */
+  max-width: 300px;
+  max-height: 300px;
+  flex-shrink: 0;
 }
 
 .about-image img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(250, 248, 248, 0.8); /* Shadow edge effect */
-  object-fit: cover; /* Ensures the image fits perfectly in the square */
+  box-shadow: 0 4px 15px rgba(250, 248, 248, 0.8);
+  object-fit: cover;
 }
 
-/* Typing text animation */
-.typing-text {
-  font-size: 18px;
-  font-weight: bold;
-  color: #00bcd4; /* Typing text color */
-  display: inline-block;
-  border-right: .15em solid #00bcd4;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink-caret 5s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #00bcd4; }
-}
-
+/* Responsive adjustments */
 @media screen and (max-width: 768px) {
   #about {
     flex-direction: column;
-    text-align: center; /* Center text for small screens */
+    text-align: center;
   }
 
   .about-content {
     max-width: 100%;
-    margin: 20px 0; /* Space above and below content */
+    margin: 20px 0;
   }
 
   .about-image {
-    max-width: 150px;
-    max-height: 150px; /* Adjust for smaller screens */
+    max-width: 200px;
+    max-height: 200px;
     margin-bottom: 20px;
   }
 }

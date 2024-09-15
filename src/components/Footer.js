@@ -1,7 +1,5 @@
-// src/components/Footer.js
 import React from 'react';
 import './Footer.css';
-
 
 const Footer = () => (
   <footer id="footer">
@@ -15,6 +13,9 @@ const Footer = () => (
       </a>
       <a href="mailto:rsingh300103@gmail.com">
         <i className="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/Rohansingh3001" target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-github"></i>
       </a>
     </div>
   </footer>
