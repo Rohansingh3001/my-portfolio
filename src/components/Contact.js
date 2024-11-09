@@ -3,8 +3,7 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser'; // Import EmailJS
 import Modal from './Modal';
 import './Contact.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { AiOutlineMail } from 'react-icons/ai'; // Import envelope icon from react-icons
 
 const Contact = () => {
   const form = useRef();
@@ -41,9 +40,9 @@ const Contact = () => {
     <section id="contact">
       {/* Toggle Button at Bottom Right */}
       <button className="contact-toggle-btn" onClick={toggleModal}>
-        <FontAwesomeIcon icon={faEnvelope} />
+        <AiOutlineMail /> {/* Use AiOutlineMail icon from react-icons */}
       </button>
-      
+
       {/* Modal with Contact Form */}
       <Modal isOpen={isModalOpen} onClose={toggleModal}>
         <h2>Contact Us</h2>

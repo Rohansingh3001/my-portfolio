@@ -9,9 +9,7 @@ import Footer from './Footer'; // Import Footer
 import Contact from './Contact';
 import './Layout.css';
 import resume from './resume.pdf';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
-
+import { AiOutlineDownload } from 'react-icons/ai'; // Import download icon from react-icons
 
 const Layout = () => (
   <>
@@ -24,14 +22,14 @@ const Layout = () => (
       <Footer /> {/* Moved Footer directly after Skills */}
       <Contact />
     </main>
-    
+
     {/* Resume Download Button */}
     <a 
       href={resume} 
       download="Rohan_singh.pdf" 
       className="resume-button"
     >
-      <FontAwesomeIcon icon={faDownload} className="download-icon" />
+      <AiOutlineDownload className="download-icon" /> {/* Use AiOutlineDownload icon */}
       <span className="resume-text">Download Resume</span>
     </a>
   </>
