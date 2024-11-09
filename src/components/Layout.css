@@ -1,127 +1,216 @@
-/* Layout.css */
+/* src/components/Layout.css */
 
 /* General Styles */
 body {
-    background-color: #000000; /* Black background color */
-    color: #ffffff; /* White text for contrast */
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background-color: #000000; /* Black background color */
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #00bcd4;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #00bcd4;
+}
+
+header p {
+  font-size: 1.5em;
+  color: #cccccc;
+}
+
+/* Section Titles */
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Links and Buttons */
+a, .btn {
+  color: #00bcd4;
+}
+
+a:hover, .btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #00bcd4;
+}
+
+/* Button Styles */
+.btn {
+  border: 2px solid #00bcd4;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Cards */
+.card {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: #00bcd4;
+}
+
+.card-text {
+  color: #dddddd;
+}
+
+/* Form Styles */
+form {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-label {
+  color: #cccccc;
+}
+
+.form-control {
+  background-color: #333333;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.form-control::placeholder {
+  color: #888888;
+}
+
+.form-control:focus {
+  background-color: #444444;
+  color: #ffffff;
+}
+
+/* Section Backgrounds */
+#about, #contact {
+  background-color: #000000;
+  padding: 60px 0;
+}
+
+#projects {
+  background-color: #0d0d0d;
+  padding: 60px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: #cccccc;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 4px solid #00bcd4;
+}
+
+/* Resume Button Styles */
+.resume-button {
+  position: fixed;
+  bottom: 100px; /* Ensures spacing above Contact button */
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0073e6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.resume-button .download-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* Show full text when hovering */
+.resume-button .resume-text {
+  display: none;
+}
+
+/* Hover effect to show text */
+.resume-button:hover .resume-text {
+  display: inline;
+}
+
+.resume-button:hover {
+  background-color: #005bb5;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+.resume-button:hover .download-icon {
+  font-size: 22px;
+}
+
+.resume-button:focus .resume-text {
+  display: inline;
+}
+
+/* Contact Button Styles */
+.contact-btn {
+  position: fixed;
+  bottom: 20px; /* Lower positioning for better spacing from Resume button */
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.contact-btn:hover {
+  background-color: #218838;
+  padding: 12px 20px;
+  font-size: 22px;
+}
+
+.contact-btn:focus {
+  outline: none;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  /* Resume and Contact Buttons adjust for smaller screen size */
+  .resume-button {
+      bottom: 70px; /* Reduced bottom spacing on mobile */
+      padding: 8px 15px;
+      font-size: 14px;
   }
   
-  /* Header Styles */
-  header {
-    background-color: #1a1a1a; /* Slightly lighter black for the header */
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 4px solid #00bcd4; /* Accent color */
+  .resume-button .download-icon {
+      font-size: 18px;
+      margin-right: 5px;
   }
-  
-  header h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #00bcd4; /* Accent color */
+
+  .contact-btn {
+      padding: 10px 12px;
+      font-size: 18px;
   }
-  
-  header p {
-    font-size: 1.5em;
-    color: #cccccc; /* Light grey for the subtitle */
-  }
-  
-  /* Section Titles */
-  h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #00bcd4; /* Accent color for section titles */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Links and Buttons */
-  a, .btn {
-    color: #00bcd4; /* Accent color */
-  }
-  
-  a:hover, .btn:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #00bcd4;
-  }
-  
-  /* Button Styles */
-  .btn {
-    border: 2px solid #00bcd4;
-    padding: 10px 20px;
-    border-radius: 30px;
-    display: inline-block;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-  
-  /* Cards */
-  .card {
-    background-color: #1a1a1a; /* Matches the dark background */
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .card-title {
-    color: #00bcd4; /* Accent color */
-  }
-  
-  .card-text {
-    color: #dddddd;
-  }
-  
-  /* Form Styles */
-  form {
-    background-color: #1a1a1a; /* Matches the dark background */
-    padding: 30px;
-    border-radius: 10px;
-  }
-  
-  .form-label {
-    color: #cccccc;
-  }
-  
-  .form-control {
-    background-color: #333333;
-    border: none;
-    color: #ffffff;
-    border-radius: 5px;
-  }
-  
-  .form-control::placeholder {
-    color: #888888;
-  }
-  
-  .form-control:focus {
-    background-color: #444444;
-    color: #ffffff;
-  }
-  
-  /* Section Backgrounds */
-  #about {
-    background-color: #000000; /* Black background */
-    padding: 60px 0;
-  }
-  
-  #projects {
-    background-color: #0d0d0d; /* Slightly different shade for distinction */
-    padding: 60px 0;
-  }
-  
-  #contact {
-    background-color: #000000; /* Black background */
-    padding: 60px 0;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #1a1a1a; /* Slightly lighter black */
-    color: #cccccc;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 4px solid #00bcd4;
-  }
-  
+}

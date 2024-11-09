@@ -3,6 +3,8 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser'; // Import EmailJS
 import Modal from './Modal';
 import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const form = useRef();
@@ -11,8 +13,7 @@ const Contact = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const openModal = () => setModalOpen(true);
-  const closeModal = () => setModalOpen(false);
+  const toggleModal = () => setModalOpen(!isModalOpen);
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -38,9 +39,13 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <button className="contact-btn" onClick={openModal}>Open Contact Form</button>
+      {/* Toggle Button at Bottom Right */}
+      <button className="contact-toggle-btn" onClick={toggleModal}>
+        <FontAwesomeIcon icon={faEnvelope} />
+      </button>
       
-      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      {/* Modal with Contact Form */}
+      <Modal isOpen={isModalOpen} onClose={toggleModal}>
         <h2>Contact Us</h2>
         <form ref={form} onSubmit={sendEmail}>
           <label htmlFor="name">Name:</label>
