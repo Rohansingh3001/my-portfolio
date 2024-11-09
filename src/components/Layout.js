@@ -10,7 +10,8 @@ import Contact from './Contact';
 import './Layout.css';
 import resume from './resume.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
 
 const Layout = () => (
   <>
